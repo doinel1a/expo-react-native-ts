@@ -5,5 +5,5 @@ type TSalute = {
 };
 
 export default function Salute({ text }: TSalute) {
-	return <Text>{text}</Text>;
+	return <Text className="text-xl font-semibold">{text}</Text>;
 }
