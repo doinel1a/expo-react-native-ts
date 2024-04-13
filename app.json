@@ -5,6 +5,7 @@
 		"version": "1.0.0",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
+		"scheme": "expo-react-native-ts",
 		"userInterfaceStyle": "light",
 		"splash": {
 			"image": "./assets/splash.png",
@@ -20,6 +21,10 @@
 				"foregroundImage": "./assets/adaptive-icon.png",
 				"backgroundColor": "#ffffff"
 			}
+		},
+		"plugins": ["expo-router"],
+		"experiments": {
+			"typedRoutes": true
 		}
 	}
 }
