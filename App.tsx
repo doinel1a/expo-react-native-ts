@@ -6,9 +6,17 @@ export default function App() {
 		<View style={styles.container}>
 			<StatusBar style="auto" />
 
-			<Text>Hello, World!</Text>
+			<Salute text="Hello, World!" />
 		</View>
 	);
+}
+
+type TSalute = {
+	text: string;
+};
+
+function Salute({ text }: TSalute) {
+	return <Text>{text}</Text>;
 }
 
 const styles = StyleSheet.create({
