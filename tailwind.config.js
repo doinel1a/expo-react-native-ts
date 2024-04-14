@@ -1,8 +1,17 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./app/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        'roboto-thin': ['Roboto-Thin', 'sans-serif'],
+        'roboto-regular': ['Roboto-Regular', 'sans-serif'],
+        'roboto-medium': ['Roboto-Medium', 'sans-serif'],
+        'roboto-bold': ['Roboto-Bold', 'sans-serif']
+      }
+    }
   },
   plugins: []
 };
