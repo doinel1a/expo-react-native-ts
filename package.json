@@ -21,6 +21,7 @@
     "prettier": "prettier --write **/**/*.{js,cjs,mjs,jsx,ts,tsx}"
   },
   "dependencies": {
+    "@expo/vector-icons": "^14.0.0",
     "expo": "^50.0.15",
     "expo-constants": "~15.4.5",
     "expo-font": "^11.10.3",
