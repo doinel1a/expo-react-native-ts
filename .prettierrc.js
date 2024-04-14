@@ -1,0 +1,35 @@
+/** @type {import("prettier").Config} */
+module.exports = {
+  printWidth: 100,
+  tabWidth: 2,
+  useTabs: false,
+  semi: true,
+  singleQuote: true,
+  jsxSingleQuote: true,
+  trailingComma: 'none',
+  bracketSpacing: true,
+  bracketSameLine: false,
+  arrowParens: 'always',
+  endOfLine: 'lf',
+  plugins: [
+    '@ianvs/prettier-plugin-sort-imports',
+    'prettier-plugin-tailwindcss' // must be last
+  ],
+  importOrder: [
+    '^react$',
+    '^react-native$',
+    '',
+    '^expo$',
+    '^expo-router$',
+    '^expo',
+    '',
+    '<TYPES>',
+    '<TYPES>^[.]',
+    '',
+    '<THIRD_PARTY_MODULES>',
+    '',
+    '^[@]/',
+    '',
+    '^[.]'
+  ]
+};

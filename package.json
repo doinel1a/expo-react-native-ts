@@ -1,37 +1,41 @@
 {
-	"private": true,
-	"license": "MIT",
-	"author": {
-		"name": "Doinel Atanasiu",
-		"email": "doinel1atanasiu@gmail.com",
-		"url": "https://business-link.d1a.app"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/doinel1a/expo-react-native-ts"
-	},
-	"main": "expo-router/entry",
-	"scripts": {
-		"start": "expo start",
-		"android": "expo start --android",
-		"ios": "expo start --ios"
-	},
-	"dependencies": {
-		"expo": "^50.0.15",
-		"expo-constants": "~15.4.5",
-		"expo-linking": "~6.2.2",
-		"expo-router": "~3.4.8",
-		"expo-status-bar": "~1.11.1",
-		"nativewind": "^2.0.11",
-		"react": "^18.2.0",
-		"react-native": "^0.73.6",
-		"react-native-safe-area-context": "4.8.2",
-		"react-native-screens": "~3.29.0"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.24.4",
-		"@types/react": "^18.2.78",
-		"tailwindcss": "3.3.2",
-		"typescript": "^5.4.5"
-	}
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Doinel Atanasiu",
+    "email": "doinel1atanasiu@gmail.com",
+    "url": "https://business-link.d1a.app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doinel1a/expo-react-native-ts"
+  },
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "prettier": "prettier --write **/**/*.{html,css,scss,js,cjs,mjs,ts,tsx}"
+  },
+  "dependencies": {
+    "expo": "^50.0.15",
+    "expo-constants": "~15.4.5",
+    "expo-linking": "~6.2.2",
+    "expo-router": "~3.4.8",
+    "expo-status-bar": "~1.11.1",
+    "nativewind": "^2.0.11",
+    "react": "^18.2.0",
+    "react-native": "^0.73.6",
+    "react-native-safe-area-context": "4.8.2",
+    "react-native-screens": "~3.29.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "@types/react": "^18.2.78",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.13",
+    "tailwindcss": "3.3.2",
+    "typescript": "^5.4.5"
+  }
 }
