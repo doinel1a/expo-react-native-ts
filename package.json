@@ -12,12 +12,13 @@
   },
   "main": "expo-router/entry",
   "scripts": {
+    "postinstall": "husky",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "lint": "eslint --ext ts --ext tsx .",
     "lint:fix": "eslint --ext ts --ext tsx . --fix",
-    "prettier": "prettier --write **/**/*.{html,css,scss,js,cjs,mjs,ts,tsx}"
+    "prettier": "prettier --write **/**/*.{js,cjs,mjs,jsx,ts,tsx}"
   },
   "dependencies": {
     "expo": "^50.0.15",
@@ -33,6 +34,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "@types/eslint": "^8.56.9",
     "@types/react": "^18.2.78",
@@ -48,9 +51,15 @@
     "eslint-plugin-react-native": "^4.1.0",
     "eslint-plugin-sonarjs": "^0.25.1",
     "eslint-plugin-unicorn": "^52.0.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.13",
     "tailwindcss": "3.3.2",
     "typescript": "^5.4.5"
+  },
+  "lint-staged": {
+    "**/**/*.{js,cjs,mjs,jsx,ts,tsx}": "npx prettier --write",
+    "**/**/*.{ts,tsx}": "npx eslint"
   }
 }
