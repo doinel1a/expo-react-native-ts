@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 
 import { Tabs } from 'expo-router';
 
@@ -40,13 +39,9 @@ export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarShowLabel: false,
+        headerShown: false,
         tabBarStyle: {
-          height: 84,
-          paddingTop: 5,
-          paddingBottom: 5,
-          paddingLeft: 5,
-          paddingRight: 5
+          height: 55
         }
       }}
     >
@@ -56,10 +51,7 @@ export default function TabsLayout() {
           name={tab.name}
           options={{
             title: tab.title,
-            headerShown: false,
-            tabBarIcon: ({ focused }) => (
-              <TabIcon title={tab.title} icon={tab.icon} isFocused={focused} />
-            )
+            tabBarIcon: ({ color }) => <TabIcon icon={tab.icon} color={color} />
           }}
         />
       ))}
@@ -68,22 +60,10 @@ export default function TabsLayout() {
 }
 
 type TTabIcon = {
-  title: string;
   icon: ComponentProps<typeof FontAwesome>['name'];
-  isFocused: boolean;
+  color: string;
 };
 
-function TabIcon({ title, icon, isFocused }: TTabIcon) {
-  return (
-    <View
-      className={`flex h-full w-full items-center justify-center rounded-md ${isFocused ? 'bg-blue-500' : ''}`}
-    >
-      <FontAwesome name={icon} size={30} color={isFocused ? '#fff' : '#d1d5db'} />
-      <Text
-        className={`text-xs ${isFocused ? 'font-semibold text-white' : 'font-normal text-gray-300'}`}
-      >
-        {title}
-      </Text>
-    </View>
-  );
+function TabIcon({ icon, color }: TTabIcon) {
+  return <FontAwesome name={icon} size={23} color={color} />;
 }
