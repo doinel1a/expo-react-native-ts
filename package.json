@@ -14,8 +14,10 @@
   "scripts": {
     "postinstall": "husky",
     "start": "expo start",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "pb:android": "expo run:android",
+    "pb:ios": "expo run:ios",
     "lint": "eslint --ext ts --ext tsx .",
     "lint:fix": "eslint --ext ts --ext tsx . --fix",
     "prettier": "prettier --write **/**/*.{js,cjs,mjs,jsx,ts,tsx}"
