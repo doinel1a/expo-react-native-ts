@@ -1,16 +1,19 @@
-import { FlatCompat } from '@eslint/eslintrc';
-import prettierConfig from 'eslint-config-prettier/flat';
-import prettierPlugin from 'eslint-plugin-prettier/recommended';
-import react from 'eslint-plugin-react';
-import sonarjs from 'eslint-plugin-sonarjs';
-import unicorn from 'eslint-plugin-unicorn';
-import tseslint from 'typescript-eslint';
+/* eslint-disable no-undef */
+
+const { FlatCompat } = require('@eslint/eslintrc');
+const prettierConfig = require('eslint-config-prettier/flat');
+const prettierPlugin = require('eslint-plugin-prettier/recommended');
+const react = require('eslint-plugin-react');
+const sonarjs = require('eslint-plugin-sonarjs');
+const unicorn = require('eslint-plugin-unicorn');
+const tseslint = require('typescript-eslint');
 
 const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname
+  baseDirectory: __dirname
 });
 
-export default tseslint.config(
+/** @type {import("eslint").Linter.Config} */
+module.exports = tseslint.config(
   {
     ignores: ['.expo']
   },
@@ -24,7 +27,7 @@ export default tseslint.config(
   prettierConfig,
   prettierPlugin,
   sonarjs.configs.recommended,
-  unicorn.configs.recommended,
+  unicorn['default']['configs']['recommended'],
   {
     files: ['**/*.ts', '**/*.tsx'],
     ...react.configs.flat.recommended,
