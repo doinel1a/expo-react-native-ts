@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { Tabs } from 'expo-router';
-
 import type { ComponentProps } from 'react';
 
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { Tabs } from 'expo-router';
 
 type TTab = {
   name: string;
@@ -64,6 +63,6 @@ type TTabIcon = {
   color: string;
 };
 
-function TabIcon({ icon, color }: TTabIcon) {
+function TabIcon({ icon, color }: Readonly<TTabIcon>) {
   return <FontAwesome name={icon} size={23} color={color} />;
 }

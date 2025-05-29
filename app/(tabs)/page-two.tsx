@@ -1,7 +1,7 @@
 import React from 'react';
-import { View } from 'react-native';
 
 import { StatusBar } from 'expo-status-bar';
+import { View } from 'react-native';
 
 import Salute from '@/components/salute';
 

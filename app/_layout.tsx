@@ -7,9 +7,9 @@ import { SplashScreen, Stack } from 'expo-router';
 import useLoadFonts from '@/lib/hooks/use-load-fonts';
 
 // eslint-disable-next-line unicorn/prefer-top-level-await
-SplashScreen.preventAutoHideAsync().catch((error: unknown) =>
-  console.error('Error preventing auto hiding splash screen', error)
-);
+SplashScreen.preventAutoHideAsync().catch((error: unknown) => {
+  console.error('Error preventing auto hiding splash screen', error);
+});
 
 export default function RootLayout() {
   const { areFontsLoaded, fontsError } = useLoadFonts();
@@ -20,9 +20,9 @@ export default function RootLayout() {
     }
 
     if (areFontsLoaded) {
-      SplashScreen.hideAsync().catch((error: unknown) =>
-        console.error('Error hiding splash screen', error)
-      );
+      SplashScreen.hideAsync().catch((error: unknown) => {
+        console.error('Error hiding splash screen', error);
+      });
     }
   }, [areFontsLoaded, fontsError]);
 

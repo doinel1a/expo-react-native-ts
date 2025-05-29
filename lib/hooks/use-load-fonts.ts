@@ -1,10 +1,8 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable unicorn/prefer-module */
 
-import { useFonts } from 'expo-font';
-
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { useFonts } from 'expo-font';
 
 export default function useLoadFonts() {
   const [areFontsLoaded, fontsError] = useFonts({
