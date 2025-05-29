@@ -14,13 +14,14 @@
   "scripts": {
     "postinstall": "husky",
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "pb:android": "expo run:android",
     "pb:ios": "expo run:ios",
+    "typecheck": "tsc --noEmit",
     "lint": "expo lint",
     "lint:fix": "expo lint --fix",
-    "prettier": "prettier --write **/**/*.{js,cjs,mjs,jsx,ts,tsx}"
+    "format": "prettier --write **/**/*.{html,css,scss,js,jsx,cjs,mjs,ts,tsx,mdx} --cache"
   },
   "dependencies": {
     "@expo/vector-icons": "14.1.0",
