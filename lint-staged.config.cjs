@@ -1,4 +1,4 @@
-import path from 'node:path';
+const path = require('node:path');
 
 const tsc = () => 'tsc --noEmit';
 
@@ -8,7 +8,7 @@ const eslint = (filenames) =>
 const prettier = (filenames) =>
   `prettier --write ${filenames.map((f) => path.relative(process.cwd(), f)).join(' ')} --cache`;
 
-export default {
+module.exports = {
   '*.{ts,tsx}': [tsc],
   '*.{js,jsx,ts,tsx}': [eslint],
   '*.{html,css,scss,js,jsx,cjs,mjs,ts,tsx,mdx}': [prettier]
