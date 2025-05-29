@@ -17,11 +17,6 @@ module.exports = {
   ],
   importOrder: [
     '^react$',
-    '^react-native$',
-    '',
-    '^expo$',
-    '^expo-router$',
-    '^expo',
     '',
     '<TYPES>',
     '<TYPES>^[.]',
