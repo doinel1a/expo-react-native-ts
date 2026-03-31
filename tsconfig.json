@@ -1,24 +1,48 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
+    // ==========================================================================
+    // PROJECTS
+    // ==========================================================================
+    "incremental": true,
+    "tsBuildInfoFile": ".expo/cache/.tsbuildinfo",
+
+    // ==========================================================================
+    // MODULES
+    // ==========================================================================
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+      "@/*": ["./*"]
+    },
+    "noUncheckedSideEffectImports": true,
+
+    // ==========================================================================
+    // INTEROP CONSTRAINTS
+    // ==========================================================================
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // ==========================================================================
+    // TYPE CHECKING
+    // ==========================================================================
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+
+    // ==========================================================================
+    // OUTPUT FORMATTING
+    // ==========================================================================
+    "noErrorTruncation": true
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".eslintrc.cjs",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts",
-    "metro.config.js",
-    "tailwind.config.js",
-    "nativewind-env.d.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  // ============================================================================
+  // FILE INCLUSION
+  // ============================================================================
+  "include": ["**/*.ts", "**/*.tsx", "expo-env.d.ts", ".expo/types/**/*.ts", "nativewind-env.d.ts"]
 }
