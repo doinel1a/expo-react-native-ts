@@ -30,6 +30,7 @@
     "@expo/vector-icons": "15.1.1",
     "expo": "55.0.9",
     "expo-constants": "55.0.9",
+    "expo-dev-client": "55.0.19",
     "expo-font": "55.0.4",
     "expo-linking": "55.0.9",
     "expo-router": "55.0.8",
