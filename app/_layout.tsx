@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 
 import { SplashScreen, Stack } from 'expo-router';
 
-import useLoadFonts from '@/lib/hooks/use-load-fonts';
+import useLoadFonts from '@/hooks/use-load-fonts';
 
 // eslint-disable-next-line unicorn/prefer-top-level-await
 SplashScreen.preventAutoHideAsync().catch((error: unknown) => {
