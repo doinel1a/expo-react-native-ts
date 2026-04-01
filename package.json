@@ -21,6 +21,11 @@
     "lint:fix": "expo lint --fix",
     "format": "prettier --write **/**/*.{html,css,scss,js,jsx,cjs,mjs,ts,tsx,mdx} --cache"
   },
+  "pnpm": {
+    "overrides": {
+      "lightningcss": "1.30.1"
+    }
+  },
   "dependencies": {
     "@expo/vector-icons": "15.1.1",
     "expo": "55.0.9",
@@ -30,9 +35,10 @@
     "expo-router": "55.0.8",
     "expo-status-bar": "55.0.4",
     "expo-system-ui": "55.0.11",
-    "nativewind": "4.2.3",
+    "nativewind": "5.0.0-preview.3",
     "react": "19.2.0",
     "react-native": "0.83.4",
+    "react-native-css": "3.0.6",
     "react-native-reanimated": "4.2.1",
     "react-native-safe-area-context": "5.6.2",
     "react-native-screens": "4.23.0",
@@ -44,6 +50,7 @@
     "@commitlint/config-conventional": "20.5.0",
     "@eslint/eslintrc": "3.3.5",
     "@ianvs/prettier-plugin-sort-imports": "4.7.1",
+    "@tailwindcss/postcss": "4.2.2",
     "@types/react": "19.2.14",
     "eslint": "10.1.0",
     "eslint-config-expo": "55.0.0",
@@ -54,9 +61,10 @@
     "eslint-plugin-unicorn": "64.0.0",
     "husky": "9.1.7",
     "lint-staged": "16.4.0",
+    "postcss": "8.5.8",
     "prettier": "3.8.1",
     "prettier-plugin-tailwindcss": "0.7.2",
-    "tailwindcss": "3.4.17",
+    "tailwindcss": "4.1.13",
     "typescript": "5.9.3",
     "typescript-eslint": "8.58.0"
   }
