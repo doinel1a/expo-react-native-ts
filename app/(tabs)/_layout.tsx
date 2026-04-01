@@ -1,17 +1,8 @@
 import React from 'react';
 
-import type { ComponentProps } from 'react';
+import { NativeTabs as Tabs } from 'expo-router/unstable-native-tabs';
 
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Tabs } from 'expo-router';
-
-type TTab = {
-  name: string;
-  title: string;
-  icon: ComponentProps<typeof FontAwesome>['name'];
-};
-
-const tabs: TTab[] = [
+const tabs = [
   {
     name: 'index',
     title: 'Home',
@@ -25,44 +16,24 @@ const tabs: TTab[] = [
   {
     name: 'page-two',
     title: 'Page two',
-    icon: 'user'
+    icon: 'person'
   },
   {
     name: 'page-three',
     title: 'Page three',
     icon: 'bookmark'
   }
-];
+] as const;
 
 export default function TabsLayout() {
   return (
-    <Tabs
-      screenOptions={{
-        headerShown: false,
-        tabBarStyle: {
-          height: 55
-        }
-      }}
-    >
+    <Tabs>
       {tabs.map((tab) => (
-        <Tabs.Screen
-          key={tab.name}
-          name={tab.name}
-          options={{
-            title: tab.title,
-            tabBarIcon: ({ color }) => <TabIcon icon={tab.icon} color={color} />
-          }}
-        />
+        <Tabs.Trigger key={tab.name} name={tab.name}>
+          <Tabs.Trigger.Icon md={tab.icon} />
+          <Tabs.Trigger.Label>{tab.title}</Tabs.Trigger.Label>
+        </Tabs.Trigger>
       ))}
     </Tabs>
   );
-}
-
-type TTabIcon = {
-  icon: ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-};
-
-function TabIcon({ icon, color }: Readonly<TTabIcon>) {
-  return <FontAwesome name={icon} size={23} color={color} />;
 }
