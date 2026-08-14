@@ -26,11 +26,6 @@
     "lint:fix": "expo lint --fix",
     "format": "prettier --write **/**/*.{html,css,scss,js,jsx,cjs,mjs,ts,tsx,mdx} --cache"
   },
-  "pnpm": {
-    "overrides": {
-      "lightningcss": "1.30.1"
-    }
-  },
   "dependencies": {
     "@expo/vector-icons": "15.1.1",
     "expo": "55.0.24",
