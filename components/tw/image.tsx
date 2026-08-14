@@ -1,6 +1,6 @@
+/* eslint-disable unicorn/name-replacements */
 /* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable unicorn/prevent-abbreviations */
 
 import React from 'react';
 

@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable unicorn/no-negated-condition */
-/* eslint-disable unicorn/prevent-abbreviations */
+/* eslint-disable unicorn/name-replacements */
 
 import React from 'react';
 
