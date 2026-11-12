@@ -21,7 +21,6 @@ import Animated from 'react-native-reanimated';
 
 // CSS-enabled Link
 export const Link = (props: React.ComponentProps<typeof RouterLink> & { className?: string }) => {
-  // @ts-expect-error: Complex union type from useCssElement
   return useCssElement(RouterLink, props, { className: 'style' });
 };
 
@@ -57,7 +56,6 @@ export const ScrollView = (
     contentContainerClassName?: string;
   }
 ) => {
-  // @ts-expect-error: Complex union type from useCssElement
   return useCssElement(RNScrollView, props, {
     className: 'style',
     contentContainerClassName: 'contentContainerStyle'
